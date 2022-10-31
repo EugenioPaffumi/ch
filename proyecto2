@@ -7,8 +7,7 @@ class Producto {
         this.precio = precio
         this.cantidad = 0
     }
-    
-}
+ }
 
 const producto1 = new Producto(1, "Recategorizacion Cat A", "Recategorizacion", 2500)
 const producto2 = new Producto(2, "Recategorizacion Cat B", "Recategorizacion", 2500)
@@ -58,6 +57,7 @@ function ejecMenu(opcionSeleccionada){
         default: alert("Respuesta invalida, intente nuevamente")
         break
     }
+
     if (salir != true){
         menu()
     }
@@ -76,31 +76,29 @@ function mostrarCatalogo(array){
 function buscarProducto(array){
     let busqueda = prompt("Ingrese el producto que desea buscar")
     let resultadoBusqueda = array.find(
-        (elemento) => elemento.nombre.toLowerCase() == busqueda.toLowerCase()
-    )
+        (elemento) => elemento.nombre.toLowerCase() == busqueda.toLowerCase())
+
     if(resultadoBusqueda == undefined){
         resultadoBusqueda = array.find(
-            (elemento) => elemento.tipo.toLowerCase() == busqueda.toLowerCase()
-        )
+            (elemento) => elemento.tipo.toLowerCase() == busqueda.toLowerCase())
     } 
     
     if(resultadoBusqueda == undefined){
         resultadoBusqueda = array.find(
-            (elemento) => elemento.variedad.toLowerCase() == busqueda.toLowerCase()
-        )
+            (elemento) => elemento.variedad.toLowerCase() == busqueda.toLowerCase())
     } 
     
     if (resultadoBusqueda == undefined){
         resultadoBusqueda = array.find(
-            (elemento) => elemento.precio == parseInt(busqueda)
-        )
+            (elemento) => elemento.precio == parseInt(busqueda))
     } 
 
     if (resultadoBusqueda == undefined){
         resultadoBusqueda = array.find(
-            (elemento) => elemento.id == parseInt(busqueda)
-        )
+            (elemento) => elemento.id == parseInt(busqueda))
     } 
 
     if (resultadoBusqueda == undefined){
-        alert("No se encontro resultado que coincida con la busqueda")}}
+        alert("No se encontro resultado que coincida con la busqueda")
+    }
+}
